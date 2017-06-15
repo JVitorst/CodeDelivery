@@ -1,0 +1,1 @@
+Sistema feito durante o curso de Laravel + Ionic da CodeEducation

@@ -1,0 +1,39 @@
+<?php
+
+namespace CodeDelivery\Providers;
+
+use Illuminate\Support\ServiceProvider;
+
+class RepositoryServiceProvider extends ServiceProvider
+{
+   
+    public function register()
+    {
+        $this->app->bind(
+            'CodeDelivery\Repositories\CategoryRepository',
+            'CodeDelivery\Repositories\CategoryRepositoryEloquent'
+        );
+        $this->app->bind(
+            'CodeDelivery\Repositories\ProductRepository',
+            'CodeDelivery\Repositories\ProductRepositoryEloquent'
+        );
+
+        $this->app->bind(
+            'CodeDelivery\Repositories\ClientRepository',
+            'CodeDelivery\Repositories\ClientRepositoryEloquent'
+        );
+        $this->app->bind(
+            'CodeDelivery\Repositories\UserRepository',
+            'CodeDelivery\Repositories\UserRepositoryEloquent'
+        );
+        $this->app->bind(
+            'CodeDelivery\Repositories\OrderRepository',
+            'CodeDelivery\Repositories\OrderRepositoryEloquent'
+        );
+        $this->app->bind(
+            'CodeDelivery\Repositories\CupomRepository',
+            'CodeDelivery\Repositories\CupomRepositoryEloquent'
+        );
+   
+    }
+}
